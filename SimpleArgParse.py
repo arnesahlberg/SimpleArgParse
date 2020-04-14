@@ -21,10 +21,10 @@ def parsearg(arg, standardvalue=None, type=str):
 # parseargs(["-i", "--input"]
 def parseargs(args, standardvalue=None, type=str):
   for arg in args:
-    parsed = parsearg(arg, standardvalue=standardvalue, type=type)
+    parsed = parsearg(arg, type=type)
     if parsed is not None:
       return parsed
-  return None # if none of the arguments were found
+  return standardvalue # if none of the arguments were found
 
 
 # check if argument is given
